@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rounding-config>
+    <rounder-class>ea.kislab1.SortingMethods.UpRounder</rounder-class>
+</rounding-config>

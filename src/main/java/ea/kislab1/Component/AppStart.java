@@ -7,31 +7,32 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Service
 public class AppStart {
     @Value("${elementSize}")
     private int elementSize;
-    @Autowired
-    private CollectionSort<Integer> collectionSort;
 
-    private List<Integer> integerList = new ArrayList<>();
+    @Autowired
+    private CollectionRound collectionRound;
+
+    private List<Double> integerList = new ArrayList<>();
 
     public String getServiceName() {
-        return collectionSort.getServiceName();
+        return collectionRound.getServiceName();
     }
 
-    public List<Integer> getIntegerList() {
+    public List<Double> getIntegerList() {
         return integerList;
     }
 
     public void initArray() {
+        integerList.clear();
         for (int i = 0; i < elementSize; i++) {
-            integerList.add((int) (Math.random()*1000));
+            integerList.add(Math.random() * 1000.0);
         }
     }
 
     public void start() {
-        collectionSort.sort(integerList);
+        collectionRound.round(integerList);
     }
 }
