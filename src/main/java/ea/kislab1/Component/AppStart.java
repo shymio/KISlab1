@@ -1,5 +1,6 @@
 package ea.kislab1.Component;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -15,14 +16,11 @@ public class AppStart {
     @Autowired
     private CollectionRound collectionRound;
 
+    @Getter
     private List<Double> integerList = new ArrayList<>();
 
     public String getServiceName() {
         return collectionRound.getServiceName();
-    }
-
-    public List<Double> getIntegerList() {
-        return integerList;
     }
 
     public void initArray() {

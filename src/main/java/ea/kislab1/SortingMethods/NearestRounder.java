@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 public class NearestRounder implements IRoundingStrategy {
     @Override
     public double round(double value) {
-        // Округление до ближайшего целого
         return (double) Math.round(value);
     }
 }

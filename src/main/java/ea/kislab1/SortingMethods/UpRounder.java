@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 public class UpRounder implements IRoundingStrategy {
     @Override
     public double round(double value) {
-        // Округление вверх
         return Math.ceil(value);
     }
 }

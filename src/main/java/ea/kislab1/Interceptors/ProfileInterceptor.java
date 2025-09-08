@@ -21,12 +21,12 @@ public class ProfileInterceptor {
     @After("logInfo()")
     public void logMethodCall(JoinPoint jp) {
         String methodName = jp.getSignature().getName();
-        log.info("название метода: " + methodName);
+        log.info("название метода: {}", methodName);
         AppStart appStart = (AppStart) jp.getTarget();
         String serviceName = appStart.getServiceName();
-        log.info("название метода округления: " + serviceName);
+        log.info("название метода округления: {}",serviceName);
 
-        appStart.getIntegerList().forEach(val -> log.info("значение: " + val));
+        appStart.getIntegerList().forEach(val -> log.info("значение: {}", val));
     }
 
     @Around("logInfo()")
