@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class DownRounder implements IRoundingStrategy {
     @Override
     public double round(double value) {
-        return Math.ceil(value);
+        return Math.floor(value);
     }
 }
